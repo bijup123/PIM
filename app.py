@@ -3,7 +3,7 @@ import uuid
 
 app = Flask(__name__)
 
-@app.route('/process', methods=['GET'])
+@app.route('/process', methods=['POST'])
 def process_items():
     data = request.json
     
