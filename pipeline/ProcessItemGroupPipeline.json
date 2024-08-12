@@ -1,0 +1,50 @@
+{
+	"name": "ProcessItemGroupPipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "CallRESTService1",
+				"type": "WebActivity",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"method": "POST",
+					"url": "https://pimservice-dqaufzh6bjevhucu.eastus-01.azurewebsites.net/pim",
+					"body": {
+						"correlationid": "77777",
+						"match_requests": [
+							{
+								"vendorname": "Cardinal Healtha Inc (111)",
+								"catalognumber": "M530-P1B",
+								"description": "TAPE SURG MICROPORE 1INYD",
+								"correlationid": "3333"
+							},
+							{
+								"vendorname": "Cardinal Healtha Inc (222)",
+								"catalognumber": "M530-P1B",
+								"description": "TAPE SURG MICROPORE 1INYD",
+								"correlationid": "3333"
+							},
+							{
+								"vendorname": "Cardinal Healtha Inc (333)",
+								"catalognumber": "M530-P1B",
+								"description": "TAPE SURG MICROPORE 1INYD",
+								"correlationid": "3333"
+							}
+						]
+					}
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2024-08-12T03:54:52Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

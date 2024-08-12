@@ -1,0 +1,13 @@
+{
+	"name": "AzureWebServiceLinkedService",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "RestService",
+		"typeProperties": {
+			"url": "https://pimservice-dqaufzh6bjevhucu.eastus-01.azurewebsites.net/process",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
